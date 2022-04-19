@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navigation Bar */
+nav {
+    background-color: #f55a5a;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 35px;
+}
+
+.logo-title {
+    color: white;
+    padding-left: 12px;
+}
+
+/* Content container*/
+.destinations {
+    background-color: #F5F5F5;
+    height: 1300px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content locations */
+.location-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.location-photo{
+    margin-right: 20px;
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.location-details{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.location-details div {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.country {
+    padding: 0 10px;
+    letter-spacing: 0.2rem;
+}
+
+.location-title {
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.date {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.description {
+    font-size: 0.9rem;
+}
+
+.maps-link {
+    color: #999;
+}
+
+.marker{
+    height: 1.5rem;
+}
+
+
+@media only screen and (max-width:550px){
+    .location-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location-photo {
+        margin-bottom: 20px;
+    }
 }
